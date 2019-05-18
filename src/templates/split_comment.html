@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>test forms</title>
+    <style>
+        body {background-color: #ddffdd}
+    </style>
+</head>
+    <body>
+        <form action="http://127.0.0.1:8000/cw_18/comment/split/" method="post">
+            <fieldset>
+                <legend>Comment</legend>
+                <label for="x_1">First</label><br>
+                <input type="text" name="first_name" id="x_1" required><br>
+                <label for="x_2">Age</label><br>
+                <input type="number" id="x_2"><br>
+                <label for="x_3">Comment</label><br>
+                <textarea name="comm" id="x_3" cols="30" rows="10" placeholder="Write some text here"></textarea><br>
+                <input type="submit" value="Confirm">
+            </fieldset>
+        </form>
+    </body>
+</html>
