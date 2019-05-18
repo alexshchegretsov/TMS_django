@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <title>test forms</title>
+</head>
+    <body>
+        <form action="http://127.0.0.1:8000/cw_18/comment/" method="post">
+            <fieldset>
+                <legend>Comment</legend>
+                <label for="x_1">First</label><br>
+                <input type="text" name="first_name" id="x_1" required><br>
+                <label for="x_2">Last</label><br>
+                <input type="text" name="last_name" id="x_2" required><br>
+                <label for="x_3">Comment</label><br>
+                <textarea name="comm" id="x_3" cols="30" rows="10" placeholder="put some text here"></textarea><br>
+                <input type="submit" value="Confirm">
+            </fieldset>
+        </form>
+    </body>
+</html>
