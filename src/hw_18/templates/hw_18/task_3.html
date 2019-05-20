@@ -1,16 +1,16 @@
 {% extends 'hw_18/base_hw_18.html' %}
 
 {% block title %}
-    lines
+    just line in list
 {% endblock %}
 
 {% block content %}
-    <div align="center">
 
-    {% for line in data_list %}
-        {{ line }}<br>
+    {% for line in file_list %}
+    {{ line }}<br>
     {% endfor %}
 
-    </div>
 {% endblock %}
+
+
 

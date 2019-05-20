@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <title>test forms</title>
-    <style>
-        body {background-color: #ddffdd}
-    </style>
-</head>
-    <body>
-        <form action="http://127.0.0.1:8000/hw_18/task_2/" method="post">
+{% extends 'hw_18/base_hw_18.html' %}
+
+
+{% block title %}
+    Form
+{% endblock %}
+
+{% block content %}
+    <form action="http://127.0.0.1:8000/hw_18/task_2/" method="post">
             <fieldset>
                 <legend><h3>Form</h3></legend>
                 <label for="x_1">First</label>
@@ -21,5 +18,4 @@
                 <input type="submit" value="Confirm">
             </fieldset>
         </form>
-    </body>
-</html>
+{% endblock %}
