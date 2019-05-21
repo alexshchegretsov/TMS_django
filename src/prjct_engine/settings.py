@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
-    'cw_18',
-    'hw_18',
+    'hw_18.apps.Hw18Config',
+    'cw_18.apps.Cw18Config',
+    # 'cw_18',
+    # 'hw_18',
 ]
 
 MIDDLEWARE = [
