@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'hw_18.apps.Hw18Config',
     'cw_18.apps.Cw18Config',
     'cw_19.apps.Cw19Config',
-    # 'cw_19',
-    # 'hw_18',
 ]
 
 MIDDLEWARE = [
