@@ -1,0 +1,16 @@
+{% extends 'hw_19/base_hw_19.html' %}
+
+{% block title %}
+    Cost
+{% endblock %}
+
+{% block content %}
+    <div align="center">
+        <h4>
+            {{ date }}<br>
+            From {{ from_where.title }} to {{ to_where.title }}<br>
+            Total cost: {{ cost }}$
+        </h4>
+    </div>
+{% endblock %}
+

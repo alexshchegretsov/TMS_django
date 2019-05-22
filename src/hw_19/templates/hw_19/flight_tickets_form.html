@@ -1,0 +1,16 @@
+{% extends 'hw_19/base_hw_19.html' %}
+
+{% block title %}
+    View
+{% endblock %}
+
+{% block content %}
+    <div align="center">
+        <form method="post" action="{% url 'tickets' %}">
+
+            {{ form.as_ul }}<br>
+
+            <input class="button-primary" type="submit" value="check">
+        </form>
+    </div>
+{% endblock %}
