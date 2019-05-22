@@ -3,19 +3,21 @@ from django.http import HttpResponse
 from .forms import WriteNewPost
 
 
-def print_string(request):
+def validator(request):
     if request.method == 'GET':
-        return render(request, 'cw_19/task_5.html')
+        context = {'form': WriteNewPost()}
+        return render(request, 'cw_19/task_5.html', context)
     elif request.method == 'POST':
         form = WriteNewPost(request.POST)
         if form.is_valid():
-            data = form.data
+            data = form.cleaned_data
             first_name = data.get('first_name')
             last_name = data.get('last_name')
             age = data.get('age')
             comment = data.get('comment')
             print(f'{first_name}|{last_name}|{age}|{comment}')
-            return render(request, 'cw_19/task_5.html')
+            context = {'form': WriteNewPost()}
+            return render(request, 'cw_19/task_5.html', context)
         else:
             errors = form.errors
             return HttpResponse(errors)

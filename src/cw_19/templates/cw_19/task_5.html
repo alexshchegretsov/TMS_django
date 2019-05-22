@@ -5,17 +5,11 @@
 {% endblock %}
 
 {% block content %}
-    <form action={% url 'comment_add' %} method="post">
+    <form action={% url 'comment' %} method="post">
         <fieldset>
-            <label for="x_1">First</label><br>
-            <input type="text" name="first_name" id="x_1" required><br>
-            <label for="x_4">Last</label>
-            <input type="text" name="last_name" id="x_4" required><br>
-            <label for="x_2">Age</label><br>
-            <input type="number" id="x_2" name="age"><br>
-            <label for="x_3">Comment</label><br>
-            <textarea name="comment" id="x_3" cols="30" rows="10" placeholder="Write some text here"></textarea><br>
+            {{ form.as_ul }}
             <input type="submit" value="Confirm">
         </fieldset>
     </form>
 {% endblock %}
+
