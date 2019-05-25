@@ -1,0 +1,38 @@
+{% extends 'hw_20/base_hw_20.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block content %}
+    <div align="center">
+    <h3>Home page</h3>
+        <p><a href="{% url 'create_car_url' %}" class="btn btn-primary">Create model</a></p>
+    <form action="{% url 'home_url' %}" method="post">
+        <table class="table table-hover">
+            <caption><b>cars in database</b></caption>
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>Weight</th>
+                <th>Owner</th>
+                <th>Year issue</th>
+            </tr>
+            {% for car in cars %}
+            <tr>
+                <td>{{ car.brand }}</td>
+                <td>{{ car.model }}</td>
+                <td>{{ car.color }}</td>
+                <td>{{ car.weight }}</td>
+                <td>{{ car.owner_full_name.title }}</td>
+                <td>{{ car.year_issue }}</td>
+                <td><a href="{% url 'edit_car_url' car.id %}" class="btn btn-light">Edit</a></td>
+                <td><a href="{% url 'delete_car_url' car.id %}" class="btn btn-danger">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+    </div>
+{% endblock %}

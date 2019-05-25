@@ -1,0 +1,14 @@
+{% extends 'hw_20/base_hw_20.html' %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'create_car_url' %}" method="post">
+
+    {{ form.as_ul }}
+
+        <input type="submit" value="Create instance" class="btn btn-primary">
+    </form>
+{% endblock %}
