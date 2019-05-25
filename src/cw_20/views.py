@@ -35,3 +35,32 @@ def remove_customer(request, customer_id):
     return redirect('home_url')
 
 
+def edit_customer(request, customer_id):
+    customer = Customer.objects.get(id=customer_id)
+    if request.method == 'GET':
+        context = {
+            'customer_id': customer_id,
+            'form': CreateCustomerForm(
+                initial={
+                    'first_name': customer.first_name,
+                    'last_name': customer.last_name,
+                    'profession': customer.profession,
+                    'age': customer.age,
+                }
+            )
+        }
+        return render(request, 'cw_20/edit.html', context)
+    elif request.method == 'POST':
+        form = CreateCustomerForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            Customer.objects.filter(id=customer_id).update(
+                first_name=data.get('first_name'),
+                last_name=data.get('last_name'),
+                profession=data.get('profession'),
+                age=data.get('age'),
+            )
+            return redirect('home_url')
+        else:
+            return HttpResponse(form.errors)
+    return HttpResponse('INVALID REQUEST METHOD')

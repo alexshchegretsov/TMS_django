@@ -1,0 +1,12 @@
+{% extends 'cw_20/base_cw_20.html' %}
+
+{% block content %}
+    <div align="center">
+
+    <form action="{% url 'edit_customer_url' customer_id %}" method="post">
+        <legend>Edit note</legend>
+    {{ form.as_ul }}
+        <input type="submit" class="btn btn-primary" value="Write changes">
+    </form>
+    </div>
+{% endblock %}
