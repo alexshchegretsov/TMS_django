@@ -1,0 +1,16 @@
+{% extends 'cw_20/base_cw_20.html' %}
+
+{% block title %}
+    Add customer
+{% endblock %}
+
+{% block content %}
+    <div align="center">
+        <form action="{% url 'create_customer_url' %}" method="post">
+
+            {{ form.as_ul }}<br>
+            <input type="submit" class="btn btn-primary btn-lg" value="Write in database">
+
+        </form>
+    </div>
+{% endblock %}

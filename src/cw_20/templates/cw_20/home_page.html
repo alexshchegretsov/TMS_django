@@ -1,11 +1,25 @@
 {% extends 'cw_20/base_cw_20.html' %}
 
+
 {% block title %}
     Home
 {% endblock %}
 
+
 {% block content %}
     <div align="center">
-    <h3>Home page</h3>
+        <h3>Home page</h3>
+        <h4>Customers</h4>
+
+        {% for customer in customers %}
+            <ul>
+                <li>{{ customer.first_name.title }} {{ customer.last_name.title }}</li>
+                <li>{{ customer.profession.title }}</li>
+                <li>{{ customer.age }}</li>
+                <li><a href="{% url 'remove_customer_url' customer.id  %}">Delete</a></li>
+            </ul>
+
+        {% endfor %}
     </div>
 {% endblock %}
+
