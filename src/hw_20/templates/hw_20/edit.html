@@ -6,8 +6,12 @@
 
 
 {% block content %}
+    <form action="{% url 'edit_car_url' car_id %}" method="post">
 
+        {{ form.as_ul }}
+        <input type="submit" value="Change" class="btn btn-primary">
 
+    </form>
 
 
 {% endblock %}
