@@ -25,7 +25,6 @@ class Track(models.Model):
     band = models.ForeignKey(MusicBand, on_delete=models.CASCADE)
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
 
-
     def __str__(self):
         return self.name
 
