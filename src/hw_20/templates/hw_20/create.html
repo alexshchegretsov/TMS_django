@@ -5,10 +5,13 @@
 {% endblock %}
 
 {% block content %}
+    <div align="center">
     <form action="{% url 'create_car_url' %}" method="post">
 
     {{ form.as_ul }}
+        <p></p>
 
         <input type="submit" value="Create instance" class="btn btn-primary">
     </form>
+    </div>
 {% endblock %}

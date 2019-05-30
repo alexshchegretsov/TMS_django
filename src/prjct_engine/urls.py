@@ -25,4 +25,6 @@ urlpatterns = [
     path('hw_19/', include('hw_19.urls')),
     path('cw_20/', include('cw_20.urls')),
     path('hw_20/', include('hw_20.urls')),
+    # path('cw_21/', include('cw_21.urls')),
+    # path('hw_21/', include('hw_21.urls')),
 ]

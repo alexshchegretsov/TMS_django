@@ -1,0 +1,20 @@
+# Получение всех альбоов группы
+Album.objects.filter(band__name="Metallica")
+Album.objects.filter(band__name__iexact="metaLLiCa")
+Album.objects.filter(band__name__contains="iCa")
+Album.objects.filter(band__name__startswith="m")
+
+# Получение всех треков альбома
+Track.objects.filter(album__name="Master of puppets")
+Track.objects.filter(album__name__iexact="master of Puppets")
+Track.objects.filter(album__name__contains="puppet")
+Track.objects.filter(album__name__startswith="m")
+
+# Получение всех треков группы
+Track.objects.filter(band__name="Metallica")
+Track.objects.filter(band__name__iexact="mETALLICa")
+Track.objects.filter(band__name__contains="tAll")
+Track.objects.filter(band__name__endswith="ca")
+
+# Получение всех альбомов групп, основанных в 1990 году
+Album.objects.filter(band__foundation_year=1990)
