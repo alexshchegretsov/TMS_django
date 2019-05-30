@@ -6,7 +6,6 @@ class MusicBand(models.Model):
     foundation_year = models.IntegerField()
     genre = models.CharField(max_length=30)
 
-
     def __str__(self):
         return self.name
 
